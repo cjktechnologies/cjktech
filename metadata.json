@@ -1,0 +1,6 @@
+{
+  "name": "CJK Technologies",
+  "description": "AI automation company website - designing, developing, deploying, and maintaining agentic systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

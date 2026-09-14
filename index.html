@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CJK Technologies</title>
+<meta name="description" content="AI automation company website - designing, developing, deploying, and maintaining agentic systems.">
+<meta property="og:title" content="CJK Technologies">
+<meta property="og:description" content="AI automation company website - designing, developing, deploying, and maintaining agentic systems.">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="industry.css">
+<style>
+  html { background: var(--color-bg); }
+  body { margin: 0; }
+  @keyframes cjkKb { from { transform: scale(1.02); } to { transform: scale(1.14); } }
+  @keyframes cjkUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @keyframes cjkBar { from { width: 0; } to { width: 100%; } }
+  @keyframes cjkMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+</style>
+</helmet>
+
+<div style="font-family: var(--font-body); background: var(--color-bg); color: var(--color-text)">
+
+  <header style="position: sticky; top: 0; z-index: 50; background: #1d2d3d; border-bottom: 1px solid color-mix(in srgb, #f2f2f3 16%, transparent)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 13px clamp(18px, 4vw, 26px); display: flex; align-items: center; gap: 10px 24px; flex-wrap: wrap; color: #f2f2f3">
+      <a href="#top" style="display: flex; align-items: center; gap: 11px; text-decoration: none; color: inherit; flex: none">
+        <img src="assets/cjk-logo.png" alt="CJK Technologies" style="height: clamp(36px, 8vw, 52px); width: auto; display: block; flex: none">
+      </a>
+      <nav style="display: flex; align-items: center; justify-content: safe center; gap: clamp(16px, 2.2vw, 30px); flex-wrap: nowrap; flex: 1 1 200px; min-width: 0; overflow-x: auto; scrollbar-width: none">
+        <a href="#about" style="text-decoration: none; color: #f2f2f3; font-family: var(--font-heading); font-size: clamp(16.5px, 1.5vw, 19px); letter-spacing: .02em; flex: none; white-space: nowrap" style-hover="color: var(--color-accent-300)">About</a>
+        <a href="#solutions" style="text-decoration: none; color: #f2f2f3; font-family: var(--font-heading); font-size: clamp(16.5px, 1.5vw, 19px); letter-spacing: .02em; flex: none; white-space: nowrap" style-hover="color: var(--color-accent-300)">Solutions</a>
+        <a href="#projects" style="text-decoration: none; color: #f2f2f3; font-family: var(--font-heading); font-size: clamp(16.5px, 1.5vw, 19px); letter-spacing: .02em; flex: none; white-space: nowrap" style-hover="color: var(--color-accent-300)">Projects</a>
+        <a href="#insights" style="text-decoration: none; color: #f2f2f3; font-family: var(--font-heading); font-size: clamp(16.5px, 1.5vw, 19px); letter-spacing: .02em; flex: none; white-space: nowrap" style-hover="color: var(--color-accent-300)">Blog</a>
+        <a href="#contact" style="text-decoration: none; color: #f2f2f3; font-family: var(--font-heading); font-size: clamp(16.5px, 1.5vw, 19px); letter-spacing: .02em; flex: none; white-space: nowrap" style-hover="color: var(--color-accent-300)">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary" style="text-decoration: none; flex: none; background: var(--color-accent-400); color: #10202e; border-color: var(--color-accent-400)">{{ ctaLabel }}</a>
+    </div>
+  </header>
+
+  <section id="top" style="position: relative; overflow: hidden; background: #16242f; color: #f2f2f3; min-height: min(520px, 84vh); display: flex; flex-direction: column">
+    <sc-for list="{{ slides }}" as="s" hint-placeholder-count="1">
+      <div style="position: absolute; inset: 0; opacity: {{ s.op }}; transition: opacity 1s ease; pointer-events: none">
+        <sc-if value="{{ s.hasVid }}" hint-placeholder-val="{{ false }}">
+          <video src="{{ s.vid }}" poster="{{ s.posterUrl }}" autoplay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.06)"></video>
+        </sc-if>
+        <sc-if value="{{ s.noVid }}" hint-placeholder-val="{{ true }}">
+          <div style="position: absolute; inset: 0; background-image: {{ s.poster }}; background-size: cover; background-position: center; filter: grayscale(1) contrast(1.06); animation: cjkKb 14s ease-out both"></div>
+        </sc-if>
+        <div style="position: absolute; inset: 0; background: linear-gradient(85deg, #16242f 8%, color-mix(in srgb, #16242f 78%, transparent) 46%, color-mix(in srgb, #16242f 34%, transparent) 100%)"></div>
+        <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, color-mix(in srgb, #f2f2f3 6%, transparent) 0 1px, transparent 1px 4px)"></div>
+      </div>
+    </sc-for>
+
+    <div style="position: relative; flex: 1; display: flex; align-items: center">
+        <div style="max-width: 1280px; margin: 0 auto; padding: clamp(40px, 6.5vw, 72px) clamp(18px, 4vw, 26px) clamp(40px, 6vw, 64px); width: 100%">
+        <div style="max-width: 880px">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 26px">
+            <span style="width: 28px; height: 1px; background: var(--color-accent-400)"></span>
+            <span style="font-family: ui-monospace, monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--color-accent-300)">{{ heroKicker }}</span>
+          </div>
+          <div style="display: grid; align-items: end">
+            <sc-for list="{{ slides }}" as="s" hint-placeholder-count="1">
+              <div style="grid-area: 1 / 1; display: flex; flex-direction: column; justify-content: flex-end; opacity: {{ s.op }}; transform: {{ s.tf }}; transition: opacity .7s ease, transform .7s ease; pointer-events: {{ s.pe }}">
+                <h1 style="font-family: var(--font-heading); font-size: clamp(38px, 5vw, 66px); line-height: 1; letter-spacing: -.02em; margin: 0 0 20px; text-wrap: pretty">{{ s.title }}</h1>
+                <p style="font-size: clamp(15.5px, 3.4vw, 18px); line-height: 1.6; margin: 0; max-width: 54ch; color: color-mix(in srgb, #f2f2f3 86%, transparent)">{{ s.body }}</p>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px">
+            <a href="#contact" class="btn btn-primary" style="text-decoration: none; padding: 12px 20px; font-size: 14.5px; background: var(--color-accent-400); color: #10202e; border-color: var(--color-accent-400)">{{ ctaLabel }}</a>
+            <a href="#solutions" class="btn btn-secondary" style="text-decoration: none; padding: 12px 20px; font-size: 14.5px; color: #f2f2f3; border-color: color-mix(in srgb, #f2f2f3 40%, transparent)">See our solutions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div style="background: #1d2d3d; color: #f2f2f3; overflow: hidden; border-bottom: 1px solid color-mix(in srgb, #f2f2f3 14%, transparent)">
+    <div style="display: flex; align-items: center; gap: 0; width: max-content; animation: cjkMarquee 34s linear infinite">
+      <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="8">
+        <span style="display: flex; align-items: center; gap: 18px; padding: 13px clamp(16px, 4vw, 26px); font-family: ui-monospace, monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in srgb, #f2f2f3 72%, transparent); white-space: nowrap">
+          <span style="width: 5px; height: 5px; background: var(--color-accent-400)"></span>{{ m }}
+        </span>
+      </sc-for>
+    </div>
+  </div>
+
+  <section id="about" style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) clamp(18px, 4vw, 26px)">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px; margin-bottom: clamp(40px, 6vw, 64px)">
+      <div>
+        <div style="font-family: ui-monospace, monospace; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 16px">About us</div>
+        <h2 style="font-family: var(--font-heading); font-size: clamp(32px, 4vw, 52px); line-height: 1.02; letter-spacing: -.02em; margin: 0; max-width: 20ch; text-wrap: pretty">A pilot is easy. An automation that still works in month nine is the job.</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; justify-content: flex-end; gap: 18px">
+        <p style="font-size: clamp(15.5px, 3.3vw, 17px); line-height: 1.65; margin: 0; color: color-mix(in srgb, var(--color-text) 84%, transparent)">CJK Technologies is an AI automation company. We design, develop, build, deploy and maintain agentic systems for companies that need work to happen reliably — across support, sales, marketing and back office.</p>
+        <p style="font-size: clamp(15.5px, 3.3vw, 17px); line-height: 1.65; margin: 0; color: color-mix(in srgb, var(--color-text) 84%, transparent)">Every engagement starts with the process, not the model: what the work actually is, where it stalls, and what a good outcome looks like in your numbers. We build the smallest system that moves that number, instrument it, and stay on to operate it.</p>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 1px; background: var(--color-bg); border: 1px solid var(--color-divider)">
+      <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="4">
+        <div style="background: var(--color-bg); padding: clamp(22px, 4vw, 28px) clamp(20px, 3.6vw, 24px) clamp(24px, 4vw, 30px); box-shadow: 0 0 0 1px var(--color-divider)">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px">
+            <span style="font-family: ui-monospace, monospace; font-size: 10.5px; letter-spacing: .14em; color: var(--color-accent-700)">{{ p.n }}</span>
+            <span style="width: 7px; height: 7px; background: var(--color-accent)"></span>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: clamp(22px, 4.6vw, 25px); margin: 0 0 10px; letter-spacing: .01em">{{ p.title }}</h3>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent)">{{ p.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 28px; margin-top: 28px; align-items: stretch">
+      <figure class="blueprint duotone" role="img" aria-label="Engineers reviewing an automation workflow" style="margin: 0; min-height: clamp(220px, 42vw, 340px); background-image: url(https://picsum.photos/id/180/1000/700); background-size: cover; background-position: center"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></figure>
+      <div class="blueprint" style="padding: clamp(22px, 4vw, 30px) clamp(20px, 3.5vw, 28px); display: flex; flex-direction: column; gap: 22px; min-width: 0">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div style="font-family: ui-monospace, monospace; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700)">How we operate</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 148px), 1fr)); gap: 24px 20px">
+          <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
+            <div>
+              <div style="font-family: var(--font-heading); font-size: clamp(25px, 3.4vw, 30px); line-height: 1.05; letter-spacing: -.01em; color: var(--color-accent-700); margin-bottom: 7px">{{ f.value }}</div>
+              <div style="font-size: 13px; line-height: 1.45; color: color-mix(in srgb, var(--color-text) 70%, transparent)">{{ f.label }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 78%, transparent); border-top: 1px solid var(--color-divider); padding-top: 18px">No black boxes: you get the evaluation set, the guardrail policy and the reporting on day one — so you can see what the system decided, and why.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="solutions" style="border-top: 1px solid var(--color-divider); background: var(--color-surface)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) clamp(18px, 4vw, 26px)">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px; align-items: end; margin-bottom: clamp(34px, 5vw, 52px)">
+        <div>
+          <div style="font-family: ui-monospace, monospace; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 16px">Our solutions</div>
+          <h2 style="font-family: var(--font-heading); font-size: clamp(32px, 4vw, 52px); line-height: 1.02; letter-spacing: -.02em; margin: 0; max-width: 22ch">Six systems we design, build and operate.</h2>
+        </div>
+        <p style="margin: 0; font-size: clamp(14.5px, 3.1vw, 15.5px); line-height: 1.6; color: color-mix(in srgb, var(--color-text) 74%, transparent); max-width: 44ch">Each one stands alone. Deployed together, they become a single operating layer across the front office and the back office. Open a row to see what we deliver.</p>
+      </div>
+
+      <div style="border-top: 1px solid var(--color-divider)">
+        <sc-for list="{{ solutions }}" as="s" hint-placeholder-count="6">
+          <div style="border-bottom: 1px solid var(--color-divider); background: {{ s.bg }}; transition: background .25s ease">
+            <button type="button" onClick="{{ s.toggle }}" style="width: 100%; cursor: pointer; background: transparent; border: 0; padding: clamp(20px, 4vw, 24px) 2px; display: grid; grid-template-columns: clamp(26px, 4vw, 62px) minmax(0, 1fr) clamp(30px, 5vw, 40px); gap: clamp(8px, 2vw, 14px); align-items: center; text-align: left; color: inherit; font: inherit">
+              <span style="font-family: ui-monospace, monospace; font-size: 11px; letter-spacing: .12em; color: var(--color-accent-700)">{{ s.n }}</span>
+              <span style="display: flex; flex-wrap: wrap; gap: 8px 26px; align-items: baseline; min-width: 0">
+                <span style="flex: 1 1 240px; min-width: 0; font-family: var(--font-heading); font-size: clamp(21px, 2.1vw, 28px); line-height: 1.1; letter-spacing: .005em">{{ s.title }}</span>
+                <span style="flex: 1 1 280px; min-width: 0; font-size: 14.5px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 70%, transparent)">{{ s.body }}</span>
+              </span>
+              <span style="justify-self: end; width: clamp(30px, 5vw, 34px); height: clamp(30px, 5vw, 34px); display: grid; place-items: center; border: 1px solid var(--color-divider); font-family: var(--font-heading); font-size: 17px; color: var(--color-accent-700); background: {{ s.iconBg }}">{{ s.icon }}</span>
+            </button>
+            <sc-if value="{{ s.open }}" hint-placeholder-val="{{ false }}">
+              <div style="padding: 0 2px 30px; display: grid; grid-template-columns: clamp(26px, 4vw, 62px) minmax(0, 1fr); gap: clamp(8px, 2vw, 14px); animation: cjkUp .3s ease both">
+                <span></span>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 26px">
+                  <div>
+                    <div style="font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 58%, transparent); margin-bottom: 14px">What we deliver</div>
+                    <sc-for list="{{ s.details }}" as="d" hint-placeholder-count="3">
+                      <div style="display: flex; gap: 11px; font-size: 14.5px; line-height: 1.55; margin-bottom: 10px">
+                        <span style="color: var(--color-accent); flex: none">+</span>
+                        <span style="color: color-mix(in srgb, var(--color-text) 82%, transparent)">{{ d }}</span>
+                      </div>
+                    </sc-for>
+                  </div>
+                  <div class="blueprint" style="padding: clamp(18px, 4vw, 22px); background: var(--color-bg); align-self: start">
+                    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+                    <div style="font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 58%, transparent); margin-bottom: 12px">Typical stack</div>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px">
+                      <sc-for list="{{ s.stack }}" as="t" hint-placeholder-count="3">
+                        <span class="tag tag-outline">{{ t }}</span>
+                      </sc-for>
+                    </div>
+                    <div style="font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 58%, transparent); margin-bottom: 8px">Time to first value</div>
+                    <div style="font-family: var(--font-heading); font-size: 24px; color: var(--color-accent-700); margin-bottom: 20px">{{ s.ttv }}</div>
+                    <a href="#contact" class="btn btn-primary btn-block" style="text-decoration: none">Scope this system</a>
+                  </div>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="background: #1d2d3d; color: #f2f2f3">
+    <div style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) clamp(18px, 4vw, 26px)">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px; align-items: end; margin-bottom: clamp(34px, 5vw, 52px)">
+        <div>
+          <div style="font-family: ui-monospace, monospace; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--color-accent-300); margin-bottom: 16px">Projects</div>
+          <h2 style="font-family: var(--font-heading); font-size: clamp(32px, 4vw, 52px); line-height: 1.02; letter-spacing: -.02em; margin: 0; max-width: 20ch">Selected work, with the reasoning shown.</h2>
+        </div>
+        <p style="margin: 0; font-size: clamp(14.5px, 3.1vw, 15.5px); line-height: 1.6; color: color-mix(in srgb, #f2f2f3 76%, transparent); max-width: 42ch">Open a case study for the brief, the build and how the system is operated after launch. Client names and verified figures are shared under NDA.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 22px">
+        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="6">
+          <button type="button" onClick="{{ p.open }}" style="text-align: left; cursor: pointer; font: inherit; color: inherit; padding: 0; background: color-mix(in srgb, #f2f2f3 5%, transparent); border: 1px solid color-mix(in srgb, #f2f2f3 18%, transparent); display: flex; flex-direction: column" style-hover="border-color: var(--color-accent-400); background: color-mix(in srgb, #f2f2f3 9%, transparent)">
+            <span class="duotone" role="img" aria-label="{{ p.title }}" style="display: block; height: clamp(150px, 34vw, 172px); background-image: {{ p.img }}; background-size: cover; background-position: center; border-bottom: 1px solid color-mix(in srgb, #f2f2f3 18%, transparent)"></span>
+            <span style="display: flex; flex-direction: column; flex: 1; padding: clamp(20px, 4vw, 24px)">
+              <span style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px">
+                <span style="font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: #10202e; background: var(--color-accent-300); padding: 3px 8px">{{ p.sector }}</span>
+                <span style="font-family: ui-monospace, monospace; font-size: 10.5px; color: color-mix(in srgb, #f2f2f3 55%, transparent)">{{ p.year }}</span>
+              </span>
+              <span style="display: block; font-family: var(--font-heading); font-size: clamp(21px, 4.4vw, 23px); line-height: 1.14; margin-bottom: 11px">{{ p.title }}</span>
+              <span style="display: block; font-size: 14px; line-height: 1.6; color: color-mix(in srgb, #f2f2f3 74%, transparent); flex: 1; margin-bottom: 18px">{{ p.blurb }}</span>
+              <span style="display: block; font-family: var(--font-heading); font-size: 14.5px; letter-spacing: .02em; color: var(--color-accent-300)">Read case study →</span>
+            </span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="insights" style="border-top: 1px solid var(--color-divider); background: var(--color-surface)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) clamp(18px, 4vw, 26px)">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 22px; flex-wrap: wrap; margin-bottom: clamp(32px, 5vw, 46px)">
+        <div>
+          <div style="font-family: ui-monospace, monospace; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 16px">Blog experts</div>
+          <h2 style="font-family: var(--font-heading); font-size: clamp(32px, 4vw, 52px); line-height: 1.02; letter-spacing: -.02em; margin: 0; max-width: 24ch">Notes from the build, by the people doing it.</h2>
+        </div>
+        <a href="#contact" class="btn btn-secondary" style="text-decoration: none">All articles</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 22px">
+        <sc-for list="{{ posts }}" as="p" hint-placeholder-count="3">
+          <article class="blueprint" style="background: var(--color-bg); display: flex; flex-direction: column">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div class="duotone" role="img" aria-label="{{ p.title }}" style="height: clamp(132px, 30vw, 148px); background-image: {{ p.img }}; background-size: cover; background-position: center; border-bottom: 1px solid var(--color-divider)"></div>
+            <div style="padding: clamp(20px, 4vw, 24px); display: flex; flex-direction: column; flex: 1">
+              <div style="display: flex; align-items: center; gap: 11px; margin-bottom: 15px">
+                <span class="tag tag-accent">{{ p.topic }}</span>
+                <span style="font-family: ui-monospace, monospace; font-size: 10.5px; color: color-mix(in srgb, var(--color-text) 52%, transparent)">{{ p.read }}</span>
+              </div>
+              <h3 style="font-family: var(--font-heading); font-size: clamp(21px, 4.4vw, 23px); line-height: 1.15; margin: 0 0 11px">{{ p.title }}</h3>
+              <p style="margin: 0 0 20px; font-size: 14px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 72%, transparent); flex: 1">{{ p.excerpt }}</p>
+              <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--color-divider); padding-top: 15px">
+                <span style="display: flex; align-items: center; gap: 10px">
+                  <span class="duotone" role="img" aria-label="{{ p.author }}" style="width: 28px; height: 28px; display: block; background-image: {{ p.avatar }}; background-size: cover; background-position: center"></span>
+                  <span style="font-size: 13px; color: color-mix(in srgb, var(--color-text) 70%, transparent)">{{ p.author }}</span>
+                </span>
+                <span style="font-family: ui-monospace, monospace; font-size: 10.5px; color: color-mix(in srgb, var(--color-text) 52%, transparent)">{{ p.date }}</span>
+              </div>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="border-top: 1px solid var(--color-divider)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) clamp(18px, 4vw, 26px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(32px, 5vw, 48px)">
+      <div>
+        <div style="font-family: ui-monospace, monospace; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 16px">Contact us</div>
+        <h2 style="font-family: var(--font-heading); font-size: clamp(32px, 4vw, 52px); line-height: 1.02; letter-spacing: -.02em; margin: 0 0 18px; max-width: 16ch">Tell us what should be automated.</h2>
+        <p style="font-size: clamp(15px, 3.3vw, 16.5px); line-height: 1.65; margin: 0 0 clamp(26px, 5vw, 34px); max-width: 42ch; color: color-mix(in srgb, var(--color-text) 80%, transparent)">Thirty minutes is enough to tell whether there is a system worth building. If there isn't, we'll say so.</p>
+        <div style="display: grid; gap: 1px; background: var(--color-divider); border: 1px solid var(--color-divider); margin-bottom: 30px">
+          <a href="mailto:info@cjktechnologies.in" style="background: var(--color-bg); padding: 17px clamp(15px, 3.6vw, 20px); text-decoration: none; color: inherit; display: block; overflow-wrap: break-word" style-hover="background: color-mix(in srgb, var(--color-accent) 9%, var(--color-bg))">
+            <span style="display: block; font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 56%, transparent); margin-bottom: 5px">Email</span>
+            <span style="font-family: var(--font-heading); font-size: clamp(17px, 3.8vw, 20px); overflow-wrap: break-word">info@cjktechnologies.in</span>
+          </a>
+        </div>
+        <div style="font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 56%, transparent); margin-bottom: 12px">Social</div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap">
+          <sc-for list="{{ socials }}" as="s" hint-placeholder-count="5">
+            <a href="{{ s.href }}" class="btn btn-secondary" style="text-decoration: none; font-size: 13px">{{ s.label }}</a>
+          </sc-for>
+        </div>
+      </div>
+
+      <div class="blueprint" style="padding: clamp(22px, 4vw, 34px); align-self: start; min-width: 0">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div style="padding: clamp(32px, 7vw, 44px) 0; text-align: center; animation: cjkUp .35s ease both">
+            <div style="width: 48px; height: 48px; margin: 0 auto 20px; display: grid; place-items: center; background: var(--color-accent); color: var(--color-bg); font-family: var(--font-heading); font-size: 23px">✓</div>
+            <h3 style="font-family: var(--font-heading); font-size: 28px; margin: 0 0 10px">Request received</h3>
+            <p style="margin: 0 auto 24px; max-width: 34ch; font-size: 15px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 74%, transparent)">{{ sentName }}, we'll reply within one business day with a proposed agenda for the call.</p>
+            <button type="button" onClick="{{ resetForm }}" class="btn btn-secondary">Send another request</button>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submitForm }}">
+            <h3 style="font-family: var(--font-heading); font-size: clamp(23px, 4.8vw, 26px); margin: 0 0 4px">{{ ctaLabel }}</h3>
+            <p style="margin: 0 0 26px; font-size: 13.5px; color: color-mix(in srgb, var(--color-text) 62%, transparent)">Fields marked * are required.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 16px; margin-bottom: 16px">
+              <div class="field">
+                <label for="cjk2-name">Full name *</label>
+                <input class="input" id="cjk2-name" type="text" placeholder="Ada Obi" value="{{ fName }}" onChange="{{ onName }}">
+                <div style="font-size: 11.5px; color: #a13333; min-height: 16px; margin-top: 4px">{{ eName }}</div>
+              </div>
+              <div class="field">
+                <label for="cjk2-email">Work email *</label>
+                <input class="input" id="cjk2-email" type="email" placeholder="you@company.com" value="{{ fEmail }}" onChange="{{ onEmail }}">
+                <div style="font-size: 11.5px; color: #a13333; min-height: 16px; margin-top: 4px">{{ eEmail }}</div>
+              </div>
+              <div class="field">
+                <label for="cjk2-company">Company *</label>
+                <input class="input" id="cjk2-company" type="text" placeholder="Company name" value="{{ fCompany }}" onChange="{{ onCompany }}">
+                <div style="font-size: 11.5px; color: #a13333; min-height: 16px; margin-top: 4px">{{ eCompany }}</div>
+              </div>
+              <div class="field">
+                <label for="cjk2-interest">Area of interest</label>
+                <select class="input" id="cjk2-interest" value="{{ fInterest }}" onChange="{{ onInterest }}">
+                  <sc-for list="{{ interestOptions }}" as="o" hint-placeholder-count="4">
+                    <option value="{{ o }}">{{ o }}</option>
+                  </sc-for>
+                </select>
+                <div style="min-height: 16px; margin-top: 4px"></div>
+              </div>
+            </div>
+            <div class="field" style="margin-bottom: 8px">
+              <label for="cjk2-message">What would you like to automate? *</label>
+              <textarea class="input" id="cjk2-message" rows="5" placeholder="The process, the volume, and what a good outcome looks like." value="{{ fMessage }}" onChange="{{ onMessage }}"></textarea>
+              <div style="font-size: 11.5px; color: #a13333; min-height: 16px; margin-top: 4px">{{ eMessage }}</div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" style="padding: 13px; font-size: 15px">{{ ctaLabel }}</button>
+            <p style="margin: 14px 0 0; font-size: 12px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 56%, transparent)">We use your details only to respond to this enquiry. No lists, no sharing.</p>
+          </form>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #16242f; color: #f2f2f3">
+    <div style="max-width: 1280px; margin: 0 auto; padding: clamp(48px, 7vw, 62px) clamp(18px, 4vw, 26px) 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 36px 32px">
+      <div>
+        <div style="margin-bottom: 16px">
+          <img src="assets/cjk-logo.png" alt="CJK Technologies" style="height: clamp(38px, 9vw, 48px); width: auto; display: block; max-width: 100%">
+        </div>
+        <p style="margin: 0 0 22px; max-width: 36ch; font-size: 13.5px; line-height: 1.6; color: color-mix(in srgb, #f2f2f3 68%, transparent)">Design, development, deployment and maintenance of AI automation systems for support, sales, marketing and operations.</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap">
+          <sc-for list="{{ socials }}" as="s" hint-placeholder-count="5">
+            <a href="{{ s.href }}" style="text-decoration: none; color: #f2f2f3; font-size: 12px; letter-spacing: .04em; padding: 6px 11px; border: 1px solid color-mix(in srgb, #f2f2f3 26%, transparent)" style-hover="border-color: var(--color-accent-400); color: var(--color-accent-300)">{{ s.label }}</a>
+          </sc-for>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in srgb, #f2f2f3 55%, transparent); margin-bottom: 15px">Solutions</div>
+        <div style="display: grid; gap: 9px">
+          <sc-for list="{{ footerSolutions }}" as="f" hint-placeholder-count="6">
+            <a href="#solutions" style="text-decoration: none; color: #f2f2f3; font-size: 13.5px" style-hover="color: var(--color-accent-300)">{{ f }}</a>
+          </sc-for>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in srgb, #f2f2f3 55%, transparent); margin-bottom: 15px">Company</div>
+        <div style="display: grid; gap: 9px">
+          <a href="#about" style="text-decoration: none; color: #f2f2f3; font-size: 13.5px" style-hover="color: var(--color-accent-300)">About us</a>
+          <a href="#projects" style="text-decoration: none; color: #f2f2f3; font-size: 13.5px" style-hover="color: var(--color-accent-300)">Projects</a>
+          <a href="#insights" style="text-decoration: none; color: #f2f2f3; font-size: 13.5px" style-hover="color: var(--color-accent-300)">Blog</a>
+          <a href="#contact" style="text-decoration: none; color: #f2f2f3; font-size: 13.5px" style-hover="color: var(--color-accent-300)">Contact us</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in srgb, #f2f2f3 55%, transparent); margin-bottom: 15px">Legal</div>
+        <div style="display: grid; gap: 9px">
+          <a href="#contact" style="text-decoration: none; color: #f2f2f3; font-size: 13.5px" style-hover="color: var(--color-accent-300)">Privacy policy</a>
+          <a href="#contact" style="text-decoration: none; color: #f2f2f3; font-size: 13.5px" style-hover="color: var(--color-accent-300)">Terms of service</a>
+          <a href="#contact" style="text-decoration: none; color: #f2f2f3; font-size: 13.5px" style-hover="color: var(--color-accent-300)">Data processing</a>
+          <a href="#contact" style="text-decoration: none; color: #f2f2f3; font-size: 13.5px" style-hover="color: var(--color-accent-300)">Security</a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(18px, 4vw, 26px) 42px">
+      <div style="border-top: 1px solid color-mix(in srgb, #f2f2f3 18%, transparent); padding-top: 20px; display: flex; justify-content: center; text-align: center; gap: 22px; flex-wrap: wrap; font-size: 12.5px; color: color-mix(in srgb, #f2f2f3 62%, transparent)">
+        <span>© 2026 CJK Technologies. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <sc-if value="{{ hasCase }}" hint-placeholder-val="{{ false }}">
+    <div class="dialog-backdrop" onClick="{{ closeCase }}" style="z-index: 90; padding: clamp(12px, 3vw, 24px); overflow: auto">
+      <div class="blueprint" onClick="{{ stop }}" style="width: min(760px, 100%); background: var(--color-bg); padding: 0; box-shadow: var(--shadow-lg); animation: cjkUp .3s ease both; max-height: 90vh; overflow: auto">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div class="duotone" role="img" aria-label="{{ caseTitle }}" style="height: 190px; background-image: {{ caseImg }}; background-size: cover; background-position: center; border-bottom: 1px solid var(--color-divider)"></div>
+        <div style="padding: clamp(22px, 4vw, 30px) clamp(20px, 4vw, 34px) 34px">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 22px">
+            <div>
+              <span class="tag tag-accent">{{ caseSector }}</span>
+              <h3 style="font-family: var(--font-heading); font-size: clamp(25px, 3vw, 34px); line-height: 1.08; margin: 12px 0 0; max-width: 26ch">{{ caseTitle }}</h3>
+            </div>
+            <button type="button" onClick="{{ closeCase }}" class="btn btn-secondary" style="width: 38px; height: 38px; padding: 0; font-size: 15px; flex: none">✕</button>
+          </div>
+          <div style="display: grid; gap: 20px">
+            <sc-for list="{{ caseBlocks }}" as="b" hint-placeholder-count="3">
+              <div style="border-top: 1px solid var(--color-divider); padding-top: 16px">
+                <div style="font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 8px">{{ b.label }}</div>
+                <p style="margin: 0; font-size: 15px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 84%, transparent)">{{ b.body }}</p>
+              </div>
+            </sc-for>
+            <div style="border-top: 1px solid var(--color-divider); padding-top: 16px">
+              <div style="font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: 12px">Outcome</div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 1px; background: var(--color-divider); border: 1px solid var(--color-divider)">
+                <sc-for list="{{ caseMetrics }}" as="m" hint-placeholder-count="3">
+                  <div style="background: var(--color-bg); padding: 17px">
+                    <div style="font-family: var(--font-heading); font-size: 24px; letter-spacing: -.01em; color: var(--color-accent-700); margin-bottom: 5px">{{ m.value }}</div>
+                    <div style="font-size: 12.5px; line-height: 1.4; color: color-mix(in srgb, var(--color-text) 68%, transparent)">{{ m.label }}</div>
+                  </div>
+                </sc-for>
+              </div>
+              <p style="margin: 12px 0 0; font-family: ui-monospace, monospace; font-size: 10.5px; color: color-mix(in srgb, var(--color-text) 52%, transparent)">Verified figures and a client reference are available under NDA.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap">
+            <a href="#contact" onClick="{{ closeCase }}" class="btn btn-primary" style="text-decoration: none">Discuss a similar build</a>
+            <button type="button" onClick="{{ closeCase }}" class="btn btn-secondary">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;ctaLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Get a demo&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;heroKicker&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;AI automation — designed, built and maintained&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;heroVideoUrls&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;,&quot;description&quot;:&quot;Comma-separated MP4 URLs, one per slide. Blank slides fall back to the still image.&quot;},&quot;heroIntervalMs&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:7000,&quot;min&quot;:3000,&quot;max&quot;:15000,&quot;step&quot;:500,&quot;unit&quot;:&quot;ms&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
+const SLIDES = [
+  { title: "AI automation, built to run in production.", body: "We design, develop, deploy and maintain agentic systems across support, sales, marketing and operations — then stay on to operate them.", tab: "The practice", link: "See our solutions", href: "#solutions", img: 180 },
+  { title: "Answer every customer in seconds, at any hour.", body: "Support and WhatsApp agents that resolve tier-one enquiries on their own and hand the rest to your team with the full context attached.", tab: "Customer operations", link: "See support agents", href: "#solutions", img: 3 },
+  { title: "Qualify and route every lead before a competitor replies.", body: "Sales agents that score inbound against your own ICP, enrich the record, and start the follow-up within minutes of the form hitting.", tab: "Revenue", link: "See sales agents", href: "#solutions", img: 160 },
+  { title: "Automation you can audit, not just admire.", body: "Evaluation, guardrails and reporting ship with the build — so every automated decision is visible, explainable and yours.", tab: "Governance", link: "Read the case studies", href: "#projects", img: 48 }
+];
+
+const PILLARS = [
+  { n: "01", title: "Design", body: "Process mapping and automation scoring before a line of code. We say no to poor candidates, in writing." },
+  { n: "02", title: "Build", body: "Production systems on your stack, with the evaluation set and guardrails written alongside the features." },
+  { n: "03", title: "Deploy", body: "Staged rollout behind human review, so confidence is earned on your own data rather than in a demo." },
+  { n: "04", title: "Maintain", body: "We stay on: monitoring, model changes, knowledge refresh, and a named owner you can actually call." }
+];
+
+const FACTS = [
+  { value: "1 week", label: "To a scoped, costed automation plan" },
+  { value: "3 weeks", label: "Typical pilot from kickoff to live" },
+  { value: "24/7", label: "Agent coverage, with human escalation paths" },
+  { value: "70%", label: "Of tier-one enquiries resolved without a human" }
+];
+
+const SOLUTIONS = [
+  { title: "AI Customer Service & Support Agents", body: "Tier-one resolution across chat, email and voice, with confident hand-off the moment a question leaves scope.",
+    details: ["Knowledge ingestion from docs, tickets and past resolutions", "Escalation rules and human hand-off with full conversation context", "Deflection, containment and satisfaction reporting per channel"],
+    stack: ["Retrieval grounding", "Helpdesk API", "Eval suite"], ttv: "3–4 weeks" },
+  { title: "AI Sales & Lead Generation Agents", body: "Qualification, enrichment and follow-up on every inbound lead within minutes, not days.",
+    details: ["Inbound qualification against written ICP criteria", "CRM enrichment and automatic routing to the right owner", "Sequenced follow-up with reply and intent detection"],
+    stack: ["CRM integration", "Enrichment APIs", "Scoring model"], ttv: "2–3 weeks" },
+  { title: "WhatsApp AI Business Agents", body: "Cloud API agents on the channel your customers already use — enquiries, bookings, order status and payments.",
+    details: ["WhatsApp Business Cloud API setup and template approval", "Catalogue, booking and order-status conversation flows", "Payment links and automated post-purchase notifications"],
+    stack: ["WhatsApp Cloud API", "Order system", "Payment links"], ttv: "3 weeks" },
+  { title: "AI Marketing Automation Platform", body: "Campaign production and lifecycle messaging generated, approved and dispatched on a cadence you control.",
+    details: ["Segment-aware content generation inside brand guardrails", "Human approval gate before anything ships", "Attribution back to the source campaign and segment"],
+    stack: ["ESP / CDP", "Brand guardrails", "Attribution"], ttv: "4 weeks" },
+  { title: "AI Workflow & Business Process Automation", body: "The back-office work nobody wants: document handling, reconciliation, approvals and internal routing.",
+    details: ["Process mapping and automation scoring before we build", "Document extraction, validation and exception queues", "Audit trail for every automated decision"],
+    stack: ["Workflow engine", "OCR + extraction", "Audit log"], ttv: "4–6 weeks" },
+  { title: "Generative AI Engine Optimization", body: "Being cited by AI answer engines is its own discipline. We make your expertise the source they quote.",
+    details: ["Answer-engine visibility audit across the major assistants", "Entity, schema and citable-content restructuring", "Monthly share-of-answer tracking against competitors"],
+    stack: ["Schema / entities", "Content system", "Answer tracking"], ttv: "2 weeks to audit" }
+];
+
+const PROJECTS = [
+  { sector: "SaaS", year: "2026", img: 0, title: "Support agent for a subscription platform",
+    blurb: "A tier-one agent handling account, billing and how-to enquiries across chat and email, with clean escalation.",
+    blocks: [["Brief", "A support team of nine was absorbing a heavy repeat volume of account and billing questions, and first-response times were slipping past a working day at peak."],
+             ["Approach", "We ingested three years of resolved tickets and the help centre, then built a retrieval-grounded agent restricted to answerable intents. Anything out of scope escalates with a written summary attached."],
+             ["Operating model", "We run the agent: weekly review of unresolved intents, monthly knowledge refresh, and an on-call path for regressions."]],
+    metrics: [["—", "Tier-one deflection"], ["—", "First-response time"], ["—", "CSAT change"]] },
+  { sector: "B2B services", year: "2025", img: 20, title: "Lead qualification and routing engine",
+    blurb: "Every inbound form, ad and referral lead qualified, enriched and routed to an owner inside five minutes.",
+    blocks: [["Brief", "Inbound leads sat in a shared inbox until someone triaged them by hand, and the strongest leads were not reliably the first ones called."],
+             ["Approach", "An agent scores each lead against a written ICP, enriches the company record and routes it to the right owner with a suggested opening. Non-fits get a courteous decline instead of silence."],
+             ["Operating model", "Scoring criteria are reviewed with the sales lead monthly; we hold the integration and the prompt set."]],
+    metrics: [["—", "Time to first touch"], ["—", "Qualified-lead rate"], ["—", "Manual triage hours"]] },
+  { sector: "Retail", year: "2026", img: 160, title: "WhatsApp ordering and order-status agent",
+    blurb: "Catalogue browsing, order placement, payment links and delivery updates inside one WhatsApp thread.",
+    blocks: [["Brief", "Orders arrived as unstructured WhatsApp messages that staff re-typed into the order system, producing errors and no status visibility for customers."],
+             ["Approach", "A Cloud API agent with a structured catalogue flow, payment links and automated dispatch notifications, writing directly into the existing order system."],
+             ["Operating model", "We manage templates, number health and catalogue sync, and monitor drop-off at each step of the flow."]],
+    metrics: [["—", "Orders via WhatsApp"], ["—", "Order-entry errors"], ["—", "Status enquiries"]] },
+  { sector: "E-commerce", year: "2025", img: 119, title: "Lifecycle marketing automation platform",
+    blurb: "Segment-aware campaign production with an approval gate, replacing a manual weekly build.",
+    blocks: [["Brief", "A three-person marketing team hand-built every lifecycle email, so segmentation stayed coarse and testing rarely happened."],
+             ["Approach", "Generation is constrained by brand rules and product data; a human approves each batch before dispatch, and results feed the next generation cycle."],
+             ["Operating model", "Guardrails and brand rules are versioned; we review performance and prune underperforming journeys monthly."]],
+    metrics: [["—", "Campaign build time"], ["—", "Lifecycle revenue"], ["—", "Send volume"]] },
+  { sector: "Logistics", year: "2026", img: 48, title: "Document processing and exception handling",
+    blurb: "Extraction, validation and reconciliation for inbound freight documents, with a queue for genuine exceptions only.",
+    blocks: [["Brief", "Freight paperwork was keyed in by hand across three formats, and mismatches surfaced only at invoicing."],
+             ["Approach", "Extraction with field-level confidence, automatic validation against the shipment record, and an exception queue that surfaces only what a human must judge."],
+             ["Operating model", "Confidence thresholds are tuned quarterly and every automated decision is logged for audit."]],
+    metrics: [["—", "Documents automated"], ["—", "Keying hours saved"], ["—", "Invoice disputes"]] },
+  { sector: "Professional services", year: "2026", img: 1, title: "Answer-engine visibility programme",
+    blurb: "Restructuring a firm's expertise so AI assistants cite it when prospects ask buying questions.",
+    blocks: [["Brief", "The firm ranked well in search but was absent from the AI assistant answers their prospects were actually reading."],
+             ["Approach", "We audited share-of-answer across the major assistants, rebuilt entity and schema coverage, and restructured cornerstone content into citable, question-shaped units."],
+             ["Operating model", "Monthly share-of-answer tracking with a content backlog prioritised by commercial intent."]],
+    metrics: [["—", "Share of answer"], ["—", "Assistant citations"], ["—", "Assisted enquiries"]] }
+];
+
+const QUOTES = [
+  { q: "They spent the first two weeks understanding how our support desk actually works. The agent they shipped reflected that — it deflected the right things and escalated the rest without drama.", n: "[Client name]", r: "Head of Customer Operations · [Company]", a: 12 },
+  { q: "The value wasn't the model. It was that someone owned the thing after launch, and told us plainly when a workflow wasn't worth automating.", n: "[Client name]", r: "Chief Operating Officer · [Company]", a: 32 },
+  { q: "Our WhatsApp channel went from an inbox we dreaded to the place most orders come from. Staff stopped re-typing anything.", n: "[Client name]", r: "Founder · [Company]", a: 47 },
+  { q: "Reporting was in place on day one, so we argued about the numbers instead of guessing at them. That is rarer than it should be.", n: "[Client name]", r: "VP Marketing · [Company]", a: 5 }
+];
+
+const POSTS = [
+  { topic: "Operations", read: "8 min read", title: "Most automation projects fail at the hand-off, not the model", excerpt: "The interesting engineering in an AI agent is rarely the reasoning. It is what happens in the twenty percent of cases the agent should refuse to handle.", author: "CJK Engineering", date: "Aug 2026", img: 4, av: 15 },
+  { topic: "Strategy", read: "6 min read", title: "How to choose the first process to automate", excerpt: "A short scoring method — volume, variance, cost of error, ownership — that predicts which candidate pays for itself and which quietly stalls.", author: "CJK Strategy", date: "Jul 2026", img: 26, av: 26 },
+  { topic: "Visibility", read: "9 min read", title: "GEO is not SEO with a new acronym", excerpt: "Answer engines synthesise rather than rank. What earns a citation looks different from what earns a click — and it changes how you structure a page.", author: "CJK Research", date: "Jun 2026", img: 9, av: 44 }
+];
+
+class Component extends DCLogic {
+  state = { slide: 0, playing: true, sol: 0, proj: null, q: 0, sent: false, sentName: "",
+            form: { name: "", email: "", company: "", interest: SOLUTIONS[0].title, message: "" }, errors: {} };
+
+  componentDidMount() {
+    this.start();
+    this.onKey = e => { if (e.key === "Escape") this.setState({ proj: null }); };
+    window.addEventListener("keydown", this.onKey);
+  }
+  componentWillUnmount() { clearInterval(this.timer); window.removeEventListener("keydown", this.onKey); }
+
+  start() {
+    clearInterval(this.timer);
+    this.timer = setInterval(() => this.setState(s => ({ slide: (s.slide + 1) % SLIDES.length })), this.props.heroIntervalMs ?? 7000);
+  }
+
+  setField(k, v) { this.setState(s => ({ form: { ...s.form, [k]: v }, errors: { ...s.errors, [k]: "" } })); }
+
+  validate() {
+    const f = this.state.form, e = {};
+    if (!f.name.trim()) e.name = "Please tell us your name.";
+    if (!f.email.trim()) e.email = "We need an email to reply to.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.email.trim())) e.email = "That doesn't look like a valid email.";
+    if (!f.company.trim()) e.company = "Which company are you with?";
+    if (f.message.trim().length < 20) e.message = "A sentence or two helps us prepare — 20 characters minimum.";
+    return e;
+  }
+
+  renderVals() {
+    const st = this.state;
+    const cta = this.props.ctaLabel ?? "Get a demo";
+    const vids = String(this.props.heroVideoUrls ?? "").split(",").map(v => v.trim()).filter(Boolean);
+    const dur = (this.props.heroIntervalMs ?? 7000) / 1000;
+    const proj = st.proj === null ? null : PROJECTS[st.proj];
+    const quote = QUOTES[st.q];
+    const photo = (id, w, h) => "url(https://picsum.photos/id/" + id + "/" + w + "/" + h + ")";
+
+    return {
+      ctaLabel: cta,
+      heroKicker: this.props.heroKicker ?? "AI automation — designed, built and maintained",
+      slides: SLIDES.map((s, i) => ({
+        title: s.title, body: s.body, link: s.link, href: s.href,
+        op: i === st.slide ? 1 : 0,
+        tf: i === st.slide ? "none" : "translateY(16px)",
+        pe: i === st.slide ? "auto" : "none",
+        poster: photo(s.img, 1800, 1000),
+        posterUrl: "https://picsum.photos/id/" + s.img + "/1800/1000",
+        vid: vids[i] || "",
+        hasVid: !!vids[i], noVid: !vids[i]
+      })),
+      slideTabs: SLIDES.map((s, i) => ({
+        n: "0" + (i + 1), label: s.tab,
+        bg: i === st.slide ? "color-mix(in srgb, #f2f2f3 10%, transparent)" : "transparent",
+        numColor: i === st.slide ? "var(--color-accent-300)" : "color-mix(in srgb, #f2f2f3 50%, transparent)",
+        opacity: i === st.slide ? 1 : 0.62,
+        barW: i === st.slide ? "100%" : "0%",
+        barAnim: i === st.slide && st.playing ? "cjkBar " + dur + "s linear both" : "none",
+        go: () => { this.setState({ slide: i, playing: false }); clearInterval(this.timer); }
+      })),
+      playLabel: st.playing ? "❙❙" : "▶",
+      togglePlay: () => {
+        if (st.playing) { clearInterval(this.timer); this.setState({ playing: false }); }
+        else { this.start(); this.setState({ playing: true }); }
+      },
+      marquee: ["Support agents", "Sales agents", "WhatsApp agents", "Marketing automation", "Process automation", "Answer-engine visibility",
+                "Support agents", "Sales agents", "WhatsApp agents", "Marketing automation", "Process automation", "Answer-engine visibility"],
+      pillars: PILLARS,
+      facts: FACTS,
+      solutions: SOLUTIONS.map((s, i) => ({
+        n: "0" + (i + 1), title: s.title, body: s.body, details: s.details, stack: s.stack, ttv: s.ttv,
+        open: st.sol === i,
+        bg: st.sol === i ? "var(--color-bg)" : "transparent",
+        iconBg: st.sol === i ? "color-mix(in srgb, var(--color-accent) 16%, transparent)" : "transparent",
+        icon: st.sol === i ? "–" : "+",
+        toggle: () => this.setState(p => ({ sol: p.sol === i ? null : i }))
+      })),
+      projects: PROJECTS.map((p, i) => ({
+        sector: p.sector, year: p.year, title: p.title, blurb: p.blurb,
+        img: photo(p.img, 800, 440),
+        open: () => this.setState({ proj: i })
+      })),
+      hasCase: proj !== null,
+      caseSector: proj ? proj.sector : "",
+      caseTitle: proj ? proj.title : "",
+      caseImg: proj ? photo(proj.img, 900, 400) : "none",
+      caseBlocks: proj ? proj.blocks.map(b => ({ label: b[0], body: b[1] })) : [],
+      caseMetrics: proj ? proj.metrics.map(m => ({ value: m[0], label: m[1] })) : [],
+      closeCase: () => this.setState({ proj: null }),
+      stop: e => e.stopPropagation(),
+      quote: quote.q, quoteName: quote.n, quoteRole: quote.r,
+      quoteAvatar: "url(https://i.pravatar.cc/160?img=" + quote.a + ")",
+      quoteList: QUOTES.map((q, i) => ({
+        n: "0" + (i + 1), name: q.n, role: q.r,
+        bg: i === st.q ? "color-mix(in srgb, var(--color-accent) 12%, var(--color-bg))" : "var(--color-bg)",
+        go: () => this.setState({ q: i })
+      })),
+      prevQuote: () => this.setState(s => ({ q: (s.q + QUOTES.length - 1) % QUOTES.length })),
+      nextQuote: () => this.setState(s => ({ q: (s.q + 1) % QUOTES.length })),
+      posts: POSTS.map(p => ({ ...p, img: photo(p.img, 700, 400), avatar: "url(https://i.pravatar.cc/80?img=" + p.av + ")" })),
+      socials: [
+        { label: "LinkedIn", href: "#contact" }, { label: "X", href: "#contact" },
+        { label: "Instagram", href: "#contact" }, { label: "YouTube", href: "#contact" }, { label: "GitHub", href: "#contact" }
+      ],
+      footerSolutions: ["Support agents", "Sales agents", "WhatsApp agents", "Marketing automation", "Process automation", "GEO"],
+      interestOptions: SOLUTIONS.map(s => s.title).concat(["Not sure yet"]),
+      sent: st.sent, notSent: !st.sent, sentName: st.sentName.split(" ")[0] || "Thanks",
+      fName: st.form.name, fEmail: st.form.email, fCompany: st.form.company, fInterest: st.form.interest, fMessage: st.form.message,
+      eName: st.errors.name || "", eEmail: st.errors.email || "", eCompany: st.errors.company || "", eMessage: st.errors.message || "",
+      onName: e => this.setField("name", e.target.value),
+      onEmail: e => this.setField("email", e.target.value),
+      onCompany: e => this.setField("company", e.target.value),
+      onInterest: e => this.setField("interest", e.target.value),
+      onMessage: e => this.setField("message", e.target.value),
+      submitForm: e => {
+        e.preventDefault();
+        const errors = this.validate();
+        if (Object.keys(errors).length) { this.setState({ errors }); return; }
+        this.setState(s => ({ sent: true, sentName: s.form.name, errors: {} }));
+      },
+      resetForm: () => this.setState({ sent: false, form: { name: "", email: "", company: "", interest: SOLUTIONS[0].title, message: "" }, errors: {} })
+    };
+  }
+}
+
+</script>
+</body>
+</html>
