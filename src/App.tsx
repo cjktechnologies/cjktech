@@ -995,7 +995,7 @@ export const App: React.FC = () => {
               }}
             >
               <a
-                href="mailto:cjkonsultants.nigeria@gmail.com"
+                href="mailto:info@cjktechnologies.in"
                 id="contact-email-link"
                 style={{
                   background: 'var(--color-bg)',
@@ -1028,7 +1028,7 @@ export const App: React.FC = () => {
                     overflowWrap: 'break-word'
                   }}
                 >
-                  cjkonsultants.nigeria@gmail.com
+                  info@cjktechnologies.in
                 </span>
               </a>
             </div>
@@ -1240,7 +1240,7 @@ export const App: React.FC = () => {
                     color: 'color-mix(in srgb, var(--color-text) 56%, transparent)'
                   }}
                 >
-                  We use your details only to respond to this enquiry. Delivered to cjkonsultants.nigeria@gmail.com.
+                  We use your details only to respond to this enquiry. No lists, no sharing.
                 </p>
               </form>
             )}
