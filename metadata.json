@@ -1,8 +1,0 @@
-{
-  "name": "CJK Technologies",
-  "description": "AI Automation Solutions for customer service, sales, marketing, workflows, and agentic commerce.",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
